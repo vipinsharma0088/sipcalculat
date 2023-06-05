@@ -1,4 +1,11 @@
-import { Container, Grid, RingProgress, Space } from "@mantine/core";
+import {
+  Badge,
+  Container,
+  Grid,
+  RingProgress,
+  Space,
+  Text,
+} from "@mantine/core";
 import { useState } from "react";
 import CalculatorSectionInputGroup from "./InputGroup";
 import useWindowSize from "@/hooks/useWindowSize";
@@ -135,31 +142,66 @@ export default function CalculatorSection() {
           sm={12}
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <RingProgress
-            size={width < 952 ? width / 2 : 400}
-            thickness={width > 756 ? 40 : 20}
-            sections={
-              totalInvestedAmount > 0
-                ? [
-                    {
-                      value: totalInvestedPercentage,
-                      color: "indigo",
-                      tooltip: "Invested amount",
-                    },
-                    {
-                      value: lumpsumProfitPercentage,
-                      color: "cyan",
-                      tooltip: "Lumpsum returns",
-                    },
-                    {
-                      value: sipProfitPercentage,
-                      color: "green",
-                      tooltip: "SIP returns",
-                    },
-                  ]
-                : []
-            }
-          />
+          <div>
+            <Text>
+              <Badge
+                variant="filled"
+                color="indigo"
+                h={8}
+                px={6}
+                mr={4}
+                style={{ position: "relative", bottom: "4px" }}
+              />
+              Invested Amount
+            </Text>
+            <Text>
+              <Badge
+                variant="filled"
+                color="cyan"
+                h={8}
+                px={6}
+                mr={4}
+                style={{ position: "relative", bottom: "4px" }}
+              />
+              Lumpsum returns
+            </Text>
+            <Text>
+              <Badge
+                variant="filled"
+                color="green"
+                h={8}
+                px={6}
+                mr={4}
+                style={{ position: "relative", bottom: "4px" }}
+              />
+              SIP returns
+            </Text>
+            <RingProgress
+              size={width < 952 ? width / 2 : 400}
+              thickness={width > 756 ? 40 : 20}
+              sections={
+                totalInvestedAmount > 0
+                  ? [
+                      {
+                        value: totalInvestedPercentage,
+                        color: "indigo",
+                        tooltip: "Invested amount",
+                      },
+                      {
+                        value: lumpsumProfitPercentage,
+                        color: "cyan",
+                        tooltip: "Lumpsum returns",
+                      },
+                      {
+                        value: sipProfitPercentage,
+                        color: "green",
+                        tooltip: "SIP returns",
+                      },
+                    ]
+                  : []
+              }
+            />
+          </div>
         </Grid.Col>
       </Grid>
     </Container>
