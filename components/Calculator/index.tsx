@@ -34,7 +34,7 @@ export default function CalculatorSection() {
   const lumpsumInvestmentAmount = calculatorState.lumpsum;
   const totalInvestedAmount = lumpsumInvestmentAmount + sipInvestmentAmount;
 
-  const sipProfit =
+  const sipFinalAmt =
     (calculatorState.sip *
       (Math.pow(1 + monthlyRate, investmentDurationInMonths) - 1)) /
     monthlyRate;
@@ -43,7 +43,8 @@ export default function CalculatorSection() {
     (lumpsumInvestmentAmount * calculatorState.timeInYears * rateOfReturn) /
     100;
 
-  const totalEstimatedReturns = sipProfit + lumpsumProfit;
+  const totalEstimatedReturns =
+    sipFinalAmt - sipInvestmentAmount + lumpsumProfit;
   // const totalLumpsumValue = lumpsumInvestmentAmount + lumpsumProfit;
   // const totalSipValue = sipInvestmentAmount + sipProfit;
   const totalValue = totalInvestedAmount + totalEstimatedReturns;
@@ -52,7 +53,7 @@ export default function CalculatorSection() {
   const lumpsumProfitPercentage = (lumpsumProfit / totalValue) * 100;
   // const lumpsumInvestmentPercentage =
   //   ((lumpsumInvestmentAmount * 100) / totalValue)*100;
-  const sipProfitPercentage = (sipProfit / totalValue) * 100;
+  const sipProfitPercentage = (sipFinalAmt / totalValue) * 100;
   // const sipInvestmentPercentage = ((sipInvestmentAmount * 100) / totalValue)*100;
 
   const { width } = useWindowSize();
@@ -114,7 +115,7 @@ export default function CalculatorSection() {
           />
           <CalculatorSectionDataDisplayGroup
             label="SIP Est. returns"
-            data={(sipProfit || 0).toLocaleString("en-IN", {
+            data={(sipFinalAmt || 0).toLocaleString("en-IN", {
               maximumFractionDigits: 0,
               style: "currency",
               currency: "INR",
