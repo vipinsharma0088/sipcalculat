@@ -39,9 +39,17 @@ export default function CalculatorSection() {
       (Math.pow(1 + monthlyRate, investmentDurationInMonths) - 1)) /
     monthlyRate;
 
+  const principalAmount = lumpsumInvestmentAmount;
+  const annualInterestRate = rateOfReturn / 100; // Convert percentage to decimal
+  const numberOfCompoundsPerYear = 1; // Assuming interest is compounded annually
+
   const lumpsumProfit =
-    (lumpsumInvestmentAmount * calculatorState.timeInYears * rateOfReturn) /
-    100;
+    principalAmount *
+      Math.pow(
+        1 + annualInterestRate / numberOfCompoundsPerYear,
+        calculatorState.timeInYears * numberOfCompoundsPerYear
+      ) -
+    principalAmount;
 
   const totalEstimatedReturns =
     sipFinalAmt - sipInvestmentAmount + lumpsumProfit;
