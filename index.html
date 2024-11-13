@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charSet="utf-8"/>
+        <title>SIP &amp;Lumpsum calculator</title>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/>
+        <meta name="description" content="Calculate and visualize the returns on your lumpsum and systematic investment plan (SIP) investments in one place."/>
+        <meta name="next-head-count" content="4"/>
+        <noscript data-n-css=""></noscript>
+        <script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script>
+        <script src="/_next/static/chunks/webpack-0b5d8249fb15f5f3.js" defer=""></script>
+        <script src="/_next/static/chunks/framework-2c79e2a64abdb08b.js" defer=""></script>
+        <script src="/_next/static/chunks/main-9c8fd354a6242c23.js" defer=""></script>
+        <script src="/_next/static/chunks/pages/_app-e673aa31b3fa0fd3.js" defer=""></script>
+        <script src="/_next/static/chunks/994-07880f2536e15efa.js" defer=""></script>
+        <script src="/_next/static/chunks/pages/index-d0372fc44c9a1a51.js" defer=""></script>
+        <script src="/_next/static/8g-GPvO0hp7OW6RvFCQ1s/_buildManifest.js" defer=""></script>
+        <script src="/_next/static/8g-GPvO0hp7OW6RvFCQ1s/_ssgManifest.js" defer=""></script>
+        <style data-emotion="mantine 1t0mjze vu1rqr 1fka4tc 1ax1l1d 16fdnqw 1vsvj0v 1im0vrl 1emc9ft uiwlmy ddkmyj 1buk6j3 12p37cx mu412o p529fo 1bykvxu s2z3jd qlkb6a x663h 17ix3kb 17h4nqu 1gz4r23 1lue0t8 1t45alw 144pr4d 10xnn1t plonns 7c7vou">
+            .mantine-1t0mjze {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 1rem;
+                max-width: 59.5rem;
+            }
+
+            .mantine-vu1rqr {
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                -webkit-tap-highlight-color: transparent;
+                color: inherit;
+                font-size: inherit;
+                line-height: 1.55;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                font-weight: 700;
+                font-size: 2.125rem;
+                line-height: 1.3;
+                margin: 0;
+            }
+
+            .mantine-vu1rqr:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-vu1rqr:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-1fka4tc {
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                -webkit-tap-highlight-color: transparent;
+                color: inherit;
+                font-size: inherit;
+                line-height: 1.55;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+            }
+
+            .mantine-1fka4tc:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-1fka4tc:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-1ax1l1d {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-right: 0rem;
+                padding-left: 0rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .mantine-16fdnqw {
+                margin: calc(-1rem / 2);
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+                -webkit-align-items: stretch;
+                -webkit-box-align: stretch;
+                -ms-flex-align: stretch;
+                align-items: stretch;
+            }
+
+            .mantine-1vsvj0v {
+                box-sizing: border-box;
+                -webkit-box-flex: 0;
+                -webkit-flex-grow: 0;
+                -ms-flex-positive: 0;
+                flex-grow: 0;
+                padding: calc(1rem / 2);
+                -webkit-flex-basis: 100%;
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                max-width: 100%;
+            }
+
+            @media (min-width: 36em) {
+                .mantine-1vsvj0v {
+                    -webkit-flex-shrink:0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                }
+            }
+
+            @media (min-width: 48em) {
+                .mantine-1vsvj0v {
+                    -webkit-flex-basis:100%;
+                    -ms-flex-preferred-size: 100%;
+                    flex-basis: 100%;
+                    -webkit-flex-shrink: 0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                    max-width: 100%;
+                    -webkit-box-flex: 0;
+                    -webkit-flex-grow: 0;
+                    -ms-flex-positive: 0;
+                    flex-grow: 0;
+                }
+            }
+
+            @media (min-width: 62em) {
+                .mantine-1vsvj0v {
+                    -webkit-flex-basis:50%;
+                    -ms-flex-preferred-size: 50%;
+                    flex-basis: 50%;
+                    -webkit-flex-shrink: 0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                    max-width: 50%;
+                    -webkit-box-flex: 0;
+                    -webkit-flex-grow: 0;
+                    -ms-flex-positive: 0;
+                    flex-grow: 0;
+                }
+            }
+
+            @media (min-width: 75em) {
+                .mantine-1vsvj0v {
+                    -webkit-flex-shrink:0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                }
+            }
+
+            @media (min-width: 88em) {
+                .mantine-1vsvj0v {
+                    -webkit-flex-shrink:0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                }
+            }
+
+            .mantine-1im0vrl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                max-width: 60rem;
+                margin-left: auto;
+                margin-right: auto;
+                padding-right: 0rem;
+                padding-left: 0rem;
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+
+            .mantine-1emc9ft {
+                box-sizing: border-box;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+
+            .mantine-1emc9ft>* {
+                box-sizing: border-box;
+                -webkit-box-flex: 0;
+                -webkit-flex-grow: 0;
+                -ms-flex-positive: 0;
+                flex-grow: 0;
+            }
+
+            .mantine-uiwlmy {
+                position: relative;
+                width: 4.625rem;
+            }
+
+            .mantine-uiwlmy:has(input:disabled) .mantine-Input-rightSection {
+                display: none;
+            }
+
+            .mantine-ddkmyj {
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                height: 2.25rem;
+                -webkit-tap-highlight-color: transparent;
+                line-height: calc(2.25rem - 0.125rem);
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+                resize: none;
+                box-sizing: border-box;
+                font-size: 0.875rem;
+                width: 100%;
+                color: #000;
+                display: block;
+                text-align: left;
+                border: 0.0625rem solid #ced4da;
+                background-color: #fff;
+                -webkit-transition: border-color 100ms ease;
+                transition: border-color 100ms ease;
+                min-height: 2.25rem;
+                padding-left: calc(2.25rem / 3);
+                padding-right: calc(2.25rem / 3);
+                border-radius: 0.25rem;
+            }
+
+            .mantine-ddkmyj:focus,.mantine-ddkmyj:focus-within {
+                outline: none;
+                border-color: #40c057;
+            }
+
+            .mantine-ddkmyj:disabled,.mantine-ddkmyj[data-disabled] {
+                background-color: #f1f3f5;
+                color: #909296;
+                opacity: 0.6;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+            .mantine-ddkmyj:disabled::-webkit-input-placeholder {
+                color: #909296;
+            }
+
+            .mantine-ddkmyj:disabled::-moz-placeholder {
+                color: #909296;
+            }
+
+            .mantine-ddkmyj:disabled:-ms-input-placeholder {
+                color: #909296;
+            }
+
+            .mantine-ddkmyj[data-disabled]::-webkit-input-placeholder {
+                color: #909296;
+            }
+
+            .mantine-ddkmyj[data-disabled]::-moz-placeholder {
+                color: #909296;
+            }
+
+            .mantine-ddkmyj[data-disabled]:-ms-input-placeholder {
+                color: #909296;
+            }
+
+            .mantine-ddkmyj:disabled::placeholder,.mantine-ddkmyj[data-disabled]::placeholder {
+                color: #909296;
+            }
+
+            .mantine-ddkmyj[data-invalid] {
+                color: #fa5252;
+                border-color: #fa5252;
+            }
+
+            .mantine-ddkmyj[data-invalid]::-webkit-input-placeholder {
+                opacity: 1;
+                color: #fa5252;
+            }
+
+            .mantine-ddkmyj[data-invalid]::-moz-placeholder {
+                opacity: 1;
+                color: #fa5252;
+            }
+
+            .mantine-ddkmyj[data-invalid]:-ms-input-placeholder {
+                opacity: 1;
+                color: #fa5252;
+            }
+
+            .mantine-ddkmyj[data-invalid]::placeholder {
+                opacity: 1;
+                color: #fa5252;
+            }
+
+            .mantine-ddkmyj[data-with-icon] {
+                padding-left: 2.25rem;
+            }
+
+            .mantine-ddkmyj::-webkit-input-placeholder {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: #adb5bd;
+                opacity: 1;
+            }
+
+            .mantine-ddkmyj::-moz-placeholder {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: #adb5bd;
+                opacity: 1;
+            }
+
+            .mantine-ddkmyj:-ms-input-placeholder {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: #adb5bd;
+                opacity: 1;
+            }
+
+            .mantine-ddkmyj::placeholder {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: #adb5bd;
+                opacity: 1;
+            }
+
+            .mantine-ddkmyj::-webkit-inner-spin-button,.mantine-ddkmyj::-webkit-outer-spin-button,.mantine-ddkmyj::-webkit-search-decoration,.mantine-ddkmyj::-webkit-search-cancel-button,.mantine-ddkmyj::-webkit-search-results-button,.mantine-ddkmyj::-webkit-search-results-decoration {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+            }
+
+            .mantine-ddkmyj[type=number] {
+                -moz-appearance: textfield;
+            }
+
+            .mantine-1buk6j3 {
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                -webkit-tap-highlight-color: transparent;
+                outline: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                touch-action: none;
+                position: relative;
+                margin-top: 0.625rem;
+            }
+
+            .mantine-12p37cx {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                width: 100%;
+                height: calc(0.5rem * 2);
+                cursor: pointer;
+            }
+
+            .mantine-12p37cx:has(~ input:disabled) {
+                pointer-events: none;
+            }
+
+            .mantine-12p37cx:has(~ input:disabled) .mantine-Slider-thumb {
+                display: none;
+            }
+
+            .mantine-12p37cx:has(~ input:disabled) .mantine-Slider-track::before {
+                content: "";
+                background-color: #e9ecef;
+            }
+
+            .mantine-12p37cx:has(~ input:disabled) .mantine-Slider-bar {
+                background-color: #ced4da;
+            }
+
+            .mantine-mu412o {
+                position: relative;
+                height: 0.5rem;
+                width: 100%;
+                margin-right: 0.5rem;
+                margin-left: 0.5rem;
+            }
+
+            .mantine-mu412o::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                border-radius: 2rem;
+                right: calc(0.5rem * -1);
+                left: calc(0.5rem * -1);
+                background-color: #e9ecef;
+                z-index: 0;
+            }
+
+            .mantine-p529fo {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                bottom: 0;
+                background-color: #40c057;
+                border-radius: 2rem;
+                left: calc(0% - 0.5rem);
+                width: calc(0.1% + 2 * 0.5rem);
+            }
+
+            .mantine-1bykvxu {
+                -webkit-tap-highlight-color: transparent;
+                box-sizing: border-box;
+                position: absolute;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                height: calc(0.5rem * 2);
+                width: calc(0.5rem * 2);
+                background-color: #fff;
+                border: 0.25rem solid #40c057;
+                color: #40c057;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                top: 50%;
+                cursor: pointer;
+                border-radius: 1000px;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                transition-duration: 100ms;
+                transition-property: box-shadow,transform;
+                transition-timing-function: ease;
+                z-index: 3;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                touch-action: none;
+            }
+
+            .mantine-1bykvxu:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-1bykvxu:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-s2z3jd {
+                position: absolute;
+                right: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .mantine-s2z3jd:has(~ input:disabled) .mantine-Slider-markFilled {
+                border: 0.125rem solid #e9ecef;
+                border-color: #ced4da;
+            }
+
+            .mantine-qlkb6a {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                bottom: 0;
+                background-color: #40c057;
+                border-radius: 2rem;
+                left: calc(0% - 0.5rem);
+                width: calc(1% + 2 * 0.5rem);
+            }
+
+            .mantine-x663h {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                bottom: 0;
+                background-color: #40c057;
+                border-radius: 2rem;
+                left: calc(0% - 0.5rem);
+                width: calc(10% + 2 * 0.5rem);
+            }
+
+            .mantine-17ix3kb {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                width: 0rem;
+                min-width: 0rem;
+                height: 0rem;
+                min-height: 0rem;
+            }
+
+            .mantine-17h4nqu {
+                box-sizing: border-box;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                gap: 1rem;
+                margin-top: 0.625rem;
+                margin-bottom: 0.625rem;
+            }
+
+            .mantine-17h4nqu>* {
+                box-sizing: border-box;
+                -webkit-box-flex: 0;
+                -webkit-flex-grow: 0;
+                -ms-flex-positive: 0;
+                flex-grow: 0;
+            }
+
+            .mantine-1gz4r23 {
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                -webkit-tap-highlight-color: transparent;
+                color: #868e96;
+                font-size: inherit;
+                line-height: 1.55;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+            }
+
+            .mantine-1gz4r23:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-1gz4r23:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-1lue0t8 {
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                -webkit-tap-highlight-color: transparent;
+                color: inherit;
+                font-size: inherit;
+                line-height: 1.55;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .mantine-1lue0t8:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-1lue0t8:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-1t45alw {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .mantine-144pr4d {
+                -webkit-tap-highlight-color: transparent;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                font-size: 0.6875rem;
+                height: 1.25rem;
+                line-height: calc(1.25rem - 0.125rem);
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                padding: 0 calc(1rem / 1.5);
+                box-sizing: border-box;
+                display: -webkit-inline-box;
+                display: -webkit-inline-flex;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                width: auto;
+                text-transform: uppercase;
+                border-radius: 2rem;
+                font-weight: 700;
+                letter-spacing: 0.015625rem;
+                cursor: inherit;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                background: #4c6ef5;
+                color: #fff;
+                border: 0.0625rem solid transparent;
+                margin-right: 0.25rem;
+                padding-right: 0.375rem;
+                padding-left: 0.375rem;
+                height: 0.5rem;
+            }
+
+            .mantine-144pr4d:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-144pr4d:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-10xnn1t {
+                -webkit-tap-highlight-color: transparent;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                font-size: 0.6875rem;
+                height: 1.25rem;
+                line-height: calc(1.25rem - 0.125rem);
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                padding: 0 calc(1rem / 1.5);
+                box-sizing: border-box;
+                display: -webkit-inline-box;
+                display: -webkit-inline-flex;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                width: auto;
+                text-transform: uppercase;
+                border-radius: 2rem;
+                font-weight: 700;
+                letter-spacing: 0.015625rem;
+                cursor: inherit;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                background: #15aabf;
+                color: #fff;
+                border: 0.0625rem solid transparent;
+                margin-right: 0.25rem;
+                padding-right: 0.375rem;
+                padding-left: 0.375rem;
+                height: 0.5rem;
+            }
+
+            .mantine-10xnn1t:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-10xnn1t:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-plonns {
+                -webkit-tap-highlight-color: transparent;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                font-size: 0.6875rem;
+                height: 1.25rem;
+                line-height: calc(1.25rem - 0.125rem);
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                padding: 0 calc(1rem / 1.5);
+                box-sizing: border-box;
+                display: -webkit-inline-box;
+                display: -webkit-inline-flex;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                width: auto;
+                text-transform: uppercase;
+                border-radius: 2rem;
+                font-weight: 700;
+                letter-spacing: 0.015625rem;
+                cursor: inherit;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                background: #40c057;
+                color: #fff;
+                border: 0.0625rem solid transparent;
+                margin-right: 0.25rem;
+                padding-right: 0.375rem;
+                padding-left: 0.375rem;
+                height: 0.5rem;
+            }
+
+            .mantine-plonns:focus {
+                outline-offset: 0.125rem;
+                outline: 0.125rem solid #51cf66;
+            }
+
+            .mantine-plonns:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            .mantine-7c7vou {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="__next">
+            <style data-emotion="css-global 1w883ez">
+                html {
+                    font-family: sans-serif;
+                    line-height: 1.15;
+                    -webkit-text-size-adjust: 100%;
+                    -moz-text-size-adjust: 100%;
+                    -ms-text-size-adjust: 100%;
+                    text-size-adjust: 100%;
+                }
+
+                body {
+                    margin: 0;
+                }
+
+                article,aside,footer,header,nav,section,figcaption,figure,main {
+                    display: block;
+                }
+
+                h1 {
+                    font-size: 2em;
+                }
+
+                hr {
+                    box-sizing: content-box;
+                    height: 0;
+                    overflow: visible;
+                }
+
+                pre {
+                    font-family: monospace,monospace;
+                    font-size: 1em;
+                }
+
+                a {
+                    background: transparent;
+                    text-decoration-skip: objects;
+                }
+
+                a:active,a:hover {
+                    outline-width: 0;
+                }
+
+                abbr[title] {
+                    border-bottom: none;
+                    -webkit-text-decoration: underline;
+                    text-decoration: underline;
+                }
+
+                b,strong {
+                    font-weight: bolder;
+                }
+
+                code,kbp,samp {
+                    font-family: monospace,monospace;
+                    font-size: 1em;
+                }
+
+                dfn {
+                    font-style: italic;
+                }
+
+                mark {
+                    background-color: #ff0;
+                    color: #000;
+                }
+
+                small {
+                    font-size: 80%;
+                }
+
+                sub,sup {
+                    font-size: 75%;
+                    line-height: 0;
+                    position: relative;
+                    vertical-align: baseline;
+                }
+
+                sup {
+                    top: -0.5em;
+                }
+
+                sub {
+                    bottom: -0.25em;
+                }
+
+                audio,video {
+                    display: inline-block;
+                }
+
+                audio:not([controls]) {
+                    display: none;
+                    height: 0;
+                }
+
+                img {
+                    border-style: none;
+                    vertical-align: middle;
+                }
+
+                svg:not(:root) {
+                    overflow: hidden;
+                }
+
+                button,input,optgroup,select,textarea {
+                    font-family: sans-serif;
+                    font-size: 100%;
+                    line-height: 1.15;
+                    margin: 0;
+                }
+
+                button,input {
+                    overflow: visible;
+                }
+
+                button,select {
+                    text-transform: none;
+                }
+
+                button,[type=reset],[type=submit] {
+                    -webkit-appearance: button;
+                }
+
+                button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner {
+                    border-style: none;
+                    padding: 0;
+                }
+
+                button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring {
+                    outline: 0.0625rem dotted ButtonText;
+                }
+
+                legend {
+                    box-sizing: border-box;
+                    color: inherit;
+                    display: table;
+                    max-width: 100%;
+                    padding: 0;
+                    white-space: normal;
+                }
+
+                progress {
+                    display: inline-block;
+                    vertical-align: baseline;
+                }
+
+                textarea {
+                    overflow: auto;
+                }
+
+                [type=checkbox],[type=radio] {
+                    box-sizing: border-box;
+                    padding: 0;
+                }
+
+                [type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+                    height: auto;
+                }
+
+                [type=search] {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    appearance: none;
+                }
+
+                [type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    appearance: none;
+                }
+
+                ::-webkit-file-upload-button {
+                    -webkit-appearance: button;
+                    -moz-appearance: button;
+                    -ms-appearance: button;
+                    appearance: button;
+                    font: inherit;
+                }
+
+                details,menu {
+                    display: block;
+                }
+
+                summary {
+                    display: -webkit-box;
+                    display: -webkit-list-item;
+                    display: -ms-list-itembox;
+                    display: list-item;
+                }
+
+                canvas {
+                    display: inline-block;
+                }
+
+                template {
+                    display: none;
+                }
+            </style>
+            <style data-emotion="css-global 1kvm0ug">
+                *,*::before,*::after {
+                    box-sizing: border-box;
+                }
+
+                html {
+                    -webkit-print-color-scheme: light;
+                    color-scheme: light;
+                }
+
+                body {
+                    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+                    background-color: #fff;
+                    color: #000;
+                    line-height: 1.55;
+                    font-size: 1rem;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            </style>
+            <div class="mantine-Container-root mantine-1t0mjze">
+                <h1 class="mantine-Text-root mantine-Title-root mantine-vu1rqr">Lumpsum and SIP Calculator</h1>
+                <div class="mantine-Text-root mantine-1fka4tc">Calculate and visualize the returns on your lumpsum and systematic investment plan (SIP) investments in one place.</div>
+                <div class="mantine-Container-root mantine-1ax1l1d">
+                    <div class="mantine-Grid-root mantine-16fdnqw">
+                        <div class="mantine-Grid-col mantine-1vsvj0v">
+                            <div class="mantine-Container-root mantine-1im0vrl">
+                                <div class="mantine-Group-root mantine-1emc9ft">
+                                    <div class="mantine-Text-root mantine-1fka4tc">Lumpsum ₹</div>
+                                    <div class="mantine-Input-wrapper mantine-uiwlmy">
+                                        <input class="mantine-Input-input mantine-ddkmyj" type="number" aria-invalid="false" value="100000"/>
+                                    </div>
+                                </div>
+                                <div class="mantine-Slider-root mantine-1buk6j3" tabindex="-1">
+                                    <div class="mantine-12p37cx mantine-Slider-trackContainer">
+                                        <div class="mantine-mu412o mantine-Slider-track">
+                                            <div class="mantine-Slider-bar mantine-p529fo"></div>
+                                            <div class="mantine-Slider-thumb mantine-1bykvxu" style="left:0.1%" tabindex="0" role="slider" aria-label="" aria-valuemax="100000000" aria-valuemin="0" aria-valuenow="100000"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mantine-s2z3jd mantine-Slider-marksContainer"></div>
+                                    <input type="hidden" value="100000"/>
+                                </div>
+                            </div>
+                            <div class="mantine-Container-root mantine-1im0vrl">
+                                <div class="mantine-Group-root mantine-1emc9ft">
+                                    <div class="mantine-Text-root mantine-1fka4tc">SIP ₹</div>
+                                    <div class="mantine-Input-wrapper mantine-uiwlmy">
+                                        <input class="mantine-Input-input mantine-ddkmyj" type="number" aria-invalid="false" value="10000"/>
+                                    </div>
+                                </div>
+                                <div class="mantine-Slider-root mantine-1buk6j3" tabindex="-1">
+                                    <div class="mantine-12p37cx mantine-Slider-trackContainer">
+                                        <div class="mantine-mu412o mantine-Slider-track">
+                                            <div class="mantine-Slider-bar mantine-qlkb6a"></div>
+                                            <div class="mantine-Slider-thumb mantine-1bykvxu" style="left:1%" tabindex="0" role="slider" aria-label="" aria-valuemax="1000000" aria-valuemin="0" aria-valuenow="10000"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mantine-s2z3jd mantine-Slider-marksContainer"></div>
+                                    <input type="hidden" value="10000"/>
+                                </div>
+                            </div>
+                            <div class="mantine-Container-root mantine-1im0vrl">
+                                <div class="mantine-Group-root mantine-1emc9ft">
+                                    <div class="mantine-Text-root mantine-1fka4tc">Expected rate of return (p.a) %</div>
+                                    <div class="mantine-Input-wrapper mantine-uiwlmy">
+                                        <input class="mantine-Input-input mantine-ddkmyj" type="number" aria-invalid="false" value="10"/>
+                                    </div>
+                                </div>
+                                <div class="mantine-Slider-root mantine-1buk6j3" tabindex="-1">
+                                    <div class="mantine-12p37cx mantine-Slider-trackContainer">
+                                        <div class="mantine-mu412o mantine-Slider-track">
+                                            <div class="mantine-Slider-bar mantine-x663h"></div>
+                                            <div class="mantine-Slider-thumb mantine-1bykvxu" style="left:10%" tabindex="0" role="slider" aria-label="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mantine-s2z3jd mantine-Slider-marksContainer"></div>
+                                    <input type="hidden" value="10"/>
+                                </div>
+                            </div>
+                            <div class="mantine-Container-root mantine-1im0vrl">
+                                <div class="mantine-Group-root mantine-1emc9ft">
+                                    <div class="mantine-Text-root mantine-1fka4tc">Time period in years</div>
+                                    <div class="mantine-Input-wrapper mantine-uiwlmy">
+                                        <input class="mantine-Input-input mantine-ddkmyj" type="number" aria-invalid="false" value="10"/>
+                                    </div>
+                                </div>
+                                <div class="mantine-Slider-root mantine-1buk6j3" tabindex="-1">
+                                    <div class="mantine-12p37cx mantine-Slider-trackContainer">
+                                        <div class="mantine-mu412o mantine-Slider-track">
+                                            <div class="mantine-Slider-bar mantine-x663h"></div>
+                                            <div class="mantine-Slider-thumb mantine-1bykvxu" style="left:10%" tabindex="0" role="slider" aria-label="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mantine-s2z3jd mantine-Slider-marksContainer"></div>
+                                    <input type="hidden" value="10"/>
+                                </div>
+                            </div>
+                            <div class="mantine-17ix3kb"></div>
+                            <div class="mantine-Group-root mantine-17h4nqu">
+                                <div class="mantine-Text-root mantine-1gz4r23">Invested amount</div>
+                                <div class="mantine-Text-root mantine-1lue0t8">₹13,00,000</div>
+                            </div>
+                            <div class="mantine-Group-root mantine-17h4nqu">
+                                <div class="mantine-Text-root mantine-1gz4r23">Lumpsum Est. returns</div>
+                                <div class="mantine-Text-root mantine-1lue0t8">₹1,59,374</div>
+                            </div>
+                            <div class="mantine-Group-root mantine-17h4nqu">
+                                <div class="mantine-Text-root mantine-1gz4r23">SIP Est. returns</div>
+                                <div class="mantine-Text-root mantine-1lue0t8">₹20,48,450</div>
+                            </div>
+                            <div class="mantine-Group-root mantine-17h4nqu">
+                                <div class="mantine-Text-root mantine-1gz4r23">Total Est. returns</div>
+                                <div class="mantine-Text-root mantine-1lue0t8">₹10,07,824</div>
+                            </div>
+                            <div class="mantine-Group-root mantine-17h4nqu">
+                                <div class="mantine-Text-root mantine-1gz4r23">Total value</div>
+                                <div class="mantine-Text-root mantine-1lue0t8">₹23,07,824</div>
+                            </div>
+                        </div>
+                        <div class="mantine-Grid-col mantine-1vsvj0v" style="display:flex;justify-content:center">
+                            <div>
+                                <div class="mantine-Text-root mantine-1fka4tc">
+                                    <div class="mantine-Badge-root mantine-144pr4d" style="position:relative;bottom:4px">
+                                        <span class="mantine-1t45alw mantine-Badge-inner"></span>
+                                    </div>
+                                    Invested Amount
+                                </div>
+                                <div class="mantine-Text-root mantine-1fka4tc">
+                                    <div class="mantine-Badge-root mantine-10xnn1t" style="position:relative;bottom:4px">
+                                        <span class="mantine-1t45alw mantine-Badge-inner"></span>
+                                    </div>
+                                    Lumpsum returns
+                                </div>
+                                <div class="mantine-Text-root mantine-1fka4tc">
+                                    <div class="mantine-Badge-root mantine-plonns" style="position:relative;bottom:4px">
+                                        <span class="mantine-1t45alw mantine-Badge-inner"></span>
+                                    </div>
+                                    SIP returns
+                                </div>
+                                <div class="mantine-RingProgress-root mantine-7c7vou" style="width:0;height:0">
+                                    <svg width="0" height="0" style="transform:rotate(-90deg)">
+                                        <circle fill="none" stroke-linecap="butt" stroke="#f1f3f5" stroke-width="20" cx="0" cy="0" r="-20" transform="scale(1, -1) translate(0, -0)" stroke-dasharray="65.34139738664686, -191.00510353023859" stroke-dashoffset="0"></circle>
+                                        <circle fill="none" stroke-linecap="butt" stroke="#4c6ef5" stroke-width="20" cx="0" cy="0" r="-20" stroke-dasharray="-70.7865138355341, -54.87719230805762" stroke-dashoffset="-125.66370614359172"></circle>
+                                        <circle fill="none" stroke-linecap="butt" stroke="#40c057" stroke-width="20" cx="0" cy="0" r="-20" stroke-dasharray="-111.54047640992397, -14.123229733667756" stroke-dashoffset="-46.19907902327709"></circle>
+                                        <circle fill="none" stroke-linecap="butt" stroke="#15aabf" stroke-width="20" cx="0" cy="0" r="-20" stroke-dasharray="-8.678113284780537, -116.9855928588112" stroke-dashoffset="-54.87719230805763"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script id="__NEXT_DATA__" type="application/json">
+            {
+                "props": {
+                    "pageProps": {
+                    }
+                },
+                "page": "/",
+                "query": {
+                },
+                "buildId": "8g-GPvO0hp7OW6RvFCQ1s",
+                "nextExport": true,
+                "autoExport": true,
+                "isFallback": false,
+                "scriptLoader": [
+                ]
+            }</script>
+    </body>
+</html>
